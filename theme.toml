@@ -49,3 +49,16 @@ min_version = "0.125.7"
   author = "nanxiaobei"
   homepage = "https://github.com/nanxiaobei"
   repo = "https://github.com/nanxiaobei/hugo-paper/"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+  [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
